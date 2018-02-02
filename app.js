@@ -18,7 +18,7 @@ app.use(cookieParser());
 const validatePasswordAuthenticated = async (req, res, next) => {
   try {
     const { user, session } = await getUserFromSession(req.cookies.sessionId);
-    if (!session.loginState === "PasswordAuthenticated")
+    if (session.loginState !== "PasswordAuthenticated")
       throw "session is not in PasswordAuthenticated state";
 
     req.user = user;
@@ -33,7 +33,7 @@ const validatePasswordAuthenticated = async (req, res, next) => {
 const validateTwoFactorAuthenticated = async (req, res, next) => {
   try {
     const { user, session } = await getUserFromSession(req.cookies.sessionId);
-    if (!session.loginState === "TwoFactorAuthenticated")
+    if (session.loginState !== "TwoFactorAuthenticated")
       throw "session is not in TwoFactorAuthenticated state";
 
     req.user = user;
