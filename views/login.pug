@@ -1,0 +1,23 @@
+html
+  head
+    title= title
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+  body
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+      a.navbar-brand(href="/") Home
+    main.container(role="main")
+      h1 Login
+      p.lead
+        | Please login below
+      .row
+        .col-6 
+          form(action='/login', method='post')
+            .form-group
+              label(for="username") Username
+              input#username.form-control(type="email" name="username" aria-describedby="emailHelp" placeholder="Username")
+              small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+            .form-group
+              label(for="password") Password
+              input#password.form-control(type="password" name="password" placeholder="Password")
+            button.btn.btn-primary(type="submit") Submit
+    

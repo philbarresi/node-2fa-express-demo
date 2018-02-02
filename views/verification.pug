@@ -1,0 +1,20 @@
+html
+  head
+    title= title
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+  body
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+      a.navbar-brand(href="/") Home
+    main.container(role="main")
+      h1 Verify
+      p.lead
+        | Please login below
+      .row
+        .col-6 
+          form(action='/verification', method='post')
+            .form-group
+              label(for="code") Two Factor Code
+              input#code.form-control(type="number" name="code" aria-describedby="codeHelp" placeholder="Two Factor Authentication Code")
+              small#codeHelp.form-text.text-muted This code was sent to your email address.
+            button.btn.btn-primary(type="submit") Submit
+    

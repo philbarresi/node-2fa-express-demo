@@ -1,0 +1,27 @@
+{
+  "name": "2fa-express-demo",
+  "version": "1.0.0",
+  "description": "A quick demonstration of two-factor authentication with Express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philbarresi/node-2fa-express-demo.git"
+  },
+  "author": "Phil Barresi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philbarresi/node-2fa-express-demo/issues"
+  },
+  "homepage": "https://github.com/philbarresi/node-2fa-express-demo#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "uuid": "^3.2.1"
+  }
+}
